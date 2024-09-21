@@ -7,3 +7,4 @@ services:
       - ./src:/usr/local/apache2/htdocs/
     ports:
       - "${PORT}:80"
+    working_dir: /
