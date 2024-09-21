@@ -28,12 +28,12 @@
     <meta name="twitter:description" content="HayaseDB is an open-source anime database designed for fans and developers alike. It offers comprehensive information on anime titles, characters, episode summaries, and more, all in one easy-to-navigate platform.">
     <meta name="twitter:image" content="https://HayaseDB.com/thumbnail.png">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16x16.png">
-    <link rel="manifest" href="/assets/logos/site.webmanifest">
-    <link rel="mask-icon" href="/assets/logos/safari-pinned-tab.svg" color="#39446a">
-    <link rel="shortcut icon" href="/assets/logos/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logos/favicon-16x16.png">
+    <link rel="manifest" href="./assets/logos/site.webmanifest">
+    <link rel="mask-icon" href="./assets/logos/safari-pinned-tab.svg" color="#39446a">
+    <link rel="shortcut icon" href="./assets/logos/favicon.ico">
     <meta name="msapplication-TileColor" content="#f0f0f0">
     <meta name="msapplication-config" content="/assets/logos/browserconfig.xml">
     <meta name="theme-color" content="#f0f0f0">
@@ -69,10 +69,15 @@
             bottom: 30px;
         }
 
+
+
+
         h1 {
             font-size: 2em;
             color: #333;
         }
+
+
 
         h1 span {
             background: linear-gradient(325deg, #435ed6, #b396e9);
@@ -131,7 +136,7 @@
             color: #666;
         }
 
-        .btn-github {
+        .btn {
             display: inline-flex;
             align-items: center;
             margin-top: 20px;
@@ -143,14 +148,16 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
+            height: 20px;
+
         }
 
-        .btn-github:hover {
+        .btn:hover {
             background-color: #b396e9;
         }
 
-        .btn-github i {
-            margin-right: 8px;
+        .btn-text {
+            margin-left: 8px;
         }
 
         .character {
@@ -189,6 +196,8 @@
         .footer i {
             transition: color 0.3s, transform 0.3s;
         }
+
+
     </style>
 </head>
 
@@ -196,12 +205,15 @@
     <div class="container">
         <h1><span>HayaseDB</span> is Under Construction</h1>
         <p>We're working hard to bring you a great experience. Check out our progress on GitHub!</p>
-        <a href="https://github.com/AIO-Develope/HayaseDB-api/" class="btn-github" target="_blank">
-            <i class="fab fa-github"></i> View on GitHub
+
+        <a href="https://web.hayasedb.com" class="btn" target="_blank">
+            <i class="fa fa-play"></i>
+            <div class="btn-text">Try now</div>
         </a>
-        <a href="https://web.hayasedb.com" class="btn-github" target="_blank">
-            Try now
+        <a href="https://github.com/AIO-Develope/HayaseDB-api/" class="btn" target="_blank">
+            <i class="fab fa-github"></i>
         </a>
+
         <img src="nagatoro.png" alt="Nagatoro" class="character">
     </div>
     <footer class="footer">
