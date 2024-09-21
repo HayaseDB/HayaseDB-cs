@@ -1,10 +1,9 @@
-version: '3'
+version: '3.8'
+
 services:
-  nginx:
+  web:
     image: nginx:latest
-    volumes:
-      - ./default.conf:/etc/nginx/default.conf
-      - ./src:/usr/share/nginx/html
     ports:
-      - "8080:80"
-    restart: always
+      - ${PORT}:80
+    volumes:
+      - ./src:/usr/share/nginx/html
