@@ -4,3 +4,4 @@ services:
     build: .
     ports:
       - ${PORT}:80
+    pull_policy: build

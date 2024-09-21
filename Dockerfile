@@ -1,5 +1,6 @@
-FROM httpd:latest
+FROM nginx:latest
 
-COPY ./src/ /usr/local/apache2/htdocs/
+COPY ./src/ /usr/share/nginx/html/
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
