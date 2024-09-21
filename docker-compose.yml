@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   web:
+    container_name:	HayaseDB-cs
     image: nginx:latest
     ports:
       - ${PORT}:80
