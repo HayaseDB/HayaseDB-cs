@@ -1,5 +1,9 @@
+version: '3.8'
+
 services:
   cs:
-    build: .
+    image: httpd:latest
+    volumes:
+      - ./src:/usr/local/apache2/htdocs/
     ports:
-      - ${PORT}:80
+      - "${PORT}:80"
