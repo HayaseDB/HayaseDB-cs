@@ -5,7 +5,7 @@ services:
     ports:
       - "${PORT:-80}:80"
     volumes:
-      - ./src:/usr/local/apache2/htdocs/
+      - ${PWD}/src:/usr/local/apache2/htdocs/
     environment:
       - PORT=${PORT:-80}
     pull_policy: build
