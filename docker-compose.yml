@@ -1,5 +1,5 @@
 services:
-  cs:
+  web:
     container_name: HayaseDB-cs
     build: .
     ports:
