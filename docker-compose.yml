@@ -6,5 +6,5 @@ services:
       - ${PORT}:80
     pull_policy: build
     volumes:
-      - ${PWD}/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ${PWD}/src:/usr/share/nginx/html/
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/usr/share/nginx/html/
