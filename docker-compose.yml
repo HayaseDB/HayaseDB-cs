@@ -1,10 +1,11 @@
 services:
-  apache:
+  cs:
     image: httpd:latest
-    container_name: apache_server
+    container_name: HayaseDB-cs
     ports:
       - "${PORT:-80}:80"
     volumes:
       - ./src:/usr/local/apache2/htdocs/
     environment:
       - PORT=${PORT:-80}
+    pull_policy: build
