@@ -1,9 +1,8 @@
+version: '3.8'
 services:
-  web:
-    image: nginx:latest
+  cs:
+    image: nginx:alpine
     ports:
       - ${PORT}:80
     volumes:
       - ./src:/usr/share/nginx/html
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    pull_policy: build
