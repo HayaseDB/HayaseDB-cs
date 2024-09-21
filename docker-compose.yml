@@ -2,9 +2,10 @@ version: '3.8'
 
 services:
   web:
-    container_name:	HayaseDB-cs
+    container_name: HayaseDB-cs
     image: nginx:latest
     ports:
-      - ${PORT}:80
+      - ${PORT:-8080}:80
     volumes:
       - ./src:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
