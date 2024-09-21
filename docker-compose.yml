@@ -2,16 +2,9 @@ version: '3.8'
 
 services:
   web:
-    image: nginx:alpine
-    volumes:
-      - ./src:/usr/share/nginx/html:ro
-    environment:
-      - NGINX_PORT=${PORT:-80} # Default to 80 if PORT env variable is not set
+    image: nginx:latest
     ports:
-      - "${PORT:-80}:80"  # Maps the port to host
-    networks:
-      - nginx-network
+      - "${PORT}:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
 
-networks:
-  nginx-network:
-    driver: bridge
