@@ -1,10 +1,6 @@
-version: '3.8'
-
 services:
   cs:
-    image: httpd:latest
-    volumes:
-      - ./src:/usr/local/apache2/htdocs/
+    container_name: HayaseDB-cs
+    build: .
     ports:
-      - "${PORT}:80"
-    working_dir: /
+      - ${PORT}:80
