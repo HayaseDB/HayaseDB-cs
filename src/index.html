@@ -165,7 +165,7 @@
             z-index: 3;
         }
 
-        .footer a {
+        .social {
             color: var(--text-color-dark);
             margin: 0 15px;
             text-decoration: none;
@@ -174,7 +174,7 @@
             transition: all 0.3s ease;
         }
 
-        .footer a:hover {
+        .social:hover {
             color: var(--primary-color);
             transform: scale(1.2) rotate(5deg);
         }
@@ -213,6 +213,19 @@
                 gap: 5px;
             }
         }
+
+        .carbonbadge {
+            position: fixed;
+            top: 10px;
+            right: -150px;
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        .carbonbadge:hover {
+            right: 10px;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -242,21 +255,25 @@
 </div>
 
 <footer class="footer">
-    <a href="https://instagram.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <a class="social" href="https://instagram.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
     </a>
-    <a href="mailto:info@hayasedb.com" aria-label="Email">
+    <a class="social" href="mailto:info@hayasedb.com" aria-label="Email">
         <i class="fas fa-envelope"></i>
     </a>
-    <a href="https://discord.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+    <a class="social" href="https://discord.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
         <i class="fab fa-discord"></i>
     </a>
-    <a href="https://tiktok.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+    <a class="social" href="https://tiktok.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
         <i class="fab fa-tiktok"></i>
     </a>
-    <a href="https://x.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+    <a class="social" href="https://x.hayasedb.com" target="_blank" rel="noopener noreferrer" aria-label="X">
         <i class="fab fa-x-twitter"></i>
     </a>
+    <div id="wcb" class="carbonbadge"></div>
+
 </footer>
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+
 </body>
 </html>
